@@ -13,7 +13,7 @@ int main(int argc, char * argv[])
 	}
 	else if(pid == 0){
 		printf("this is child process...\n");
-		execl("./io_line_buff",(char *)0,NULL);
+		execl("./io_line_buffer.out",(char *)0,NULL);
 		perror("execl");
 	}
 
