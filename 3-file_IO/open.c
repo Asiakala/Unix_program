@@ -16,6 +16,7 @@ int main(int argc,char *argv[])
 		perror("write");
 	}
 
+	close(fd);
 	printf("before exit\n");
 
 	exit(0);
