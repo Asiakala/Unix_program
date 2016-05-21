@@ -13,11 +13,11 @@ char buf[SIZE];
 int main(int argc,char *argv[])
 {
 	int fd;
-	int cyc=2000000;
+	int cyc=200;
 	
 	memset(buf,'A',SIZE);	
 
-	if((fd = open("test.txt",O_WRONLY))<0){
+	if((fd = open("test.txt",O_WRONLY | O_APPEND))<0){
 		perror("open in write");
 	}
 
