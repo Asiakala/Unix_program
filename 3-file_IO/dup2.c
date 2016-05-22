@@ -10,11 +10,12 @@ int main(int argc,char *argv)
 		perror("open");
 	printf("fd = %d\n",fd);
 
-	fd = 1;
+	dup2(1,0);
+	dup2(fd,1);
 
-	printf("fd = %d\n",dup2(fd,0));
-	printf("fd = %d\n",dup2(fd,1));
-	printf("fd = %d\n",dup2(fd,2));
+	write(1,"hello",5);
+
+	sleep(100);
 
 	exit(0);
 }
