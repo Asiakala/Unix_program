@@ -38,7 +38,7 @@ int main(int argc,char *argv[])
 			ptr = "symbolic link";
 		else
 			ptr = "** unknown mode **";
-		printf("%s\n",ptr);
+		printf("%s blksize = %ld , blocks = %ld ,links = %ld\n",ptr,(unsigned long)buf.st_blksize,(unsigned long)buf.st_blocks,(unsigned long)buf.st_nlink);
 	}
 	exit(0);
 }
