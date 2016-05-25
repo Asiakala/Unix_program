@@ -8,7 +8,8 @@ int main(int argc,char * argv[])
 	fprintf(stdout,"this is a test!","%s");
 
 	sleep(5);
-	printf("print a \\n!\n");
+//	printf("print a \\n!\n");
+	fflush(stdout);
 	sleep(5);
 	exit(0);
 }
