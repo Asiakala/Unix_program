@@ -7,8 +7,13 @@
 
 int main(int argc,char *argv[])
 {
-	if(unlink("access.link")<0)
+	if(open("tempfile",O_RDWR)<0)
+		perror("open");
+	if(unlink("tempfile")<0)
 		perror("unlink");
+	printf("file unlinked OK!\n");
+	sleep(20);
+	printf("done!\n");
 
 	exit(0);
 }
