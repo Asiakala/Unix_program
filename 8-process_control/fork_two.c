@@ -12,8 +12,9 @@ int main(int argc,char *argv[])
 			perror("fork2");
 		else if(pid > 0)
 			exit(0);
-		
-		sleep(2);
+	
+		while(getppid() != 1)
+			sleep(1);	
 		printf("second child,parent pid = %d\n",getppid());
 		exit(0);
 	}
