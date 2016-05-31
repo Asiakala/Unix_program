@@ -10,6 +10,7 @@ int main(int argc ,char *argv[])
 	int fd;
 	printf("pid = %d\n",getpid());
 	printf("ppid = %d\n",getppid());
+	printf("pgid = %d\n",getpgid(0));
 	printf("uid = %d\n",getuid());
 	printf("euid = %d\n",geteuid());
 	printf("gid = %d\n",getgid());
