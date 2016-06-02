@@ -29,7 +29,7 @@ static void sig_handle(int sig)
 		printf("sig = %d ,received signal SIGALRM\n",sig);
 		kill(getpid(),SIGABRT);
 //		kill(getpid(),SIGSTOP);
-		flag = 1;
+//		flag = 1;
 		
 	}
 	else if(sig == SIGHUP)

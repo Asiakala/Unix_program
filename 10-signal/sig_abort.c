@@ -3,8 +3,10 @@
 
 int main(int argc,char *argv[])
 {
-	printf("send abort signal,pid = %d\n",getpid());
-	kill(getpid(),SIGABRT);
+	fprintf(stdout,"%s","abc");
+//	fclose(stdout);
+//	kill(getpid(),SIGABRT);
+	abort();
 	printf("end send abort signal\n");
 
 	exit(0);
